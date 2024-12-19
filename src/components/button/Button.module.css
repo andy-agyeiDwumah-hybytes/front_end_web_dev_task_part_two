@@ -1,0 +1,29 @@
+.main {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.button {
+    line-height: 3;
+    padding: 0.5em 1.5em;
+    font-size: 1.4rem;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(0 0 0 / 1);
+    border-color: rgba(255 0 0 / 1);
+    background-color: rgba(255 0 0 / 0.7);
+    transition: background-color 1s ease-in, box-shadow 0.5s ease-in;
+    border-width: 5px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.button:hover {
+    background-color: rgba(255 0 0 / 1);
+    box-shadow: 1px 1px 15px rgba(0 0 0 / 1);
+}
+
+
+.button:focus-visible {
+    border-color: rgba(255 255 255 / 1);
+}

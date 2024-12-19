@@ -1,0 +1,119 @@
+.toDoListForm {
+    container: to-do-form / inline-size;
+}
+
+.addNewToDoInput {
+    display: inline-block;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.toDoListBtns {
+    line-height: 1.5;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.saveBtn {
+    background-color: #5DB7DE;
+}
+
+.editBtn {
+    background-color: #EAF6FF;
+}
+
+.cancelBtn {
+    background-color: rgba(0 0 0 / 0.7);
+    color: #fff;
+}
+
+.deleteBtn {
+    background-color: rgba(255 0 0 / 0.7);
+}
+
+.addNewToDoBtn {
+    padding: 0.8em 1.2em;
+    font-size: 1rem;
+}
+
+/* Edit, Delete, Save, Cancel */
+.toDoListSecondaryBtns {
+    font-size: 0.9rem;
+    padding: 0.5em 1em;
+}
+
+/* Targets the last buttons of a todo item */
+input.toDoListEditTextInput ~ button:last-of-type, input.toDoListCheckbox ~ button:last-of-type {
+    margin-left: 0.5em;
+}
+
+.toDoListInputLabel {
+    font-size: 1.5rem;
+}
+
+.toDoListInputLabelCompleted {
+    text-decoration: line-through;
+    font-size: 1.5rem;
+}
+
+.toDoListCheckbox {
+    margin-inline: 1.2em;
+    transform: scale(2);
+}
+
+.toDoListEditTextInput {
+    margin-right: 1.2em;
+    padding: 0.5em;
+}
+
+.numOfTodosLeftText {
+    font-size: 1.8rem;
+}
+
+.toDoListUl > li {
+    margin-bottom: 2em;
+}
+
+/* Adjust breakpoint because of the padding-inline on the main */
+@container to-do-form (width >= 230px) {
+    .addNewToDoInput {
+        width: 100%;
+    }
+
+    .addNewToDoBtn {
+        margin: 1em 0 0;
+        width: 100%;
+    }
+
+    .toDoListUl {
+        padding-left: 0.5em;
+    }
+}
+
+@media (width >= 280px) {
+    .main {
+        padding: 1em 1em 0;
+        margin: 0 auto;
+    }
+}
+
+@media (width >= 576px) {
+    .main {
+        padding-top: 2em;
+    }
+}
+
+@container to-do-form (width >= 576px) {
+    .addNewToDoInput {
+        width: max-content;
+    }
+
+    .addNewToDoBtn {
+        margin: 0 0 0 0.5em;
+        width: max-content;
+    }
+
+    .toDoListUl {
+        padding-left: 2.5em;
+    }
+}

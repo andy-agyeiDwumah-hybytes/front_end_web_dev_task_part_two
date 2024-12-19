@@ -1,0 +1,79 @@
+.main {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.heading {
+    font-size: 2.5rem;
+}
+
+.dynamicForm {
+    --opacity: 0.7;
+    padding: 0 1.5em 1em;
+    min-width: 400px;
+    background-image: url("../../assets/images/home_page_backgroundImg.jpg");
+    background-position: center;
+    background-size: cover;
+    border-image: fill 1 linear-gradient(
+        rgba(255 255 255 / var(--opacity)),
+        rgba(255 255 200 / var(--opacity))
+    )
+}
+
+.requiredText, .submitBtn {
+    margin-bottom: 2.5em;
+}
+
+.dynamicForm span[aria-label="required"] {
+    color: rgba(255 0 0 / 0.9);
+}
+
+.dynamicForm input,
+.submitBtn {
+    width: 100%;
+}
+
+.dynamicForm input {
+    display: block;
+    padding: 1em 0.5em;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(0 0 0 / 1);
+}
+
+/* Only necessary if there is a border on the inputs */
+/* .invalidData {
+    border-color: rgba(255 0 0 / 0.9);
+    background-color: rgba(255 0 0 / 0.1);
+} */
+
+.showInvalidPara {
+    color: rgba(255 0 0 / 1);
+    font-weight: 600;
+}
+
+.dynamicForm > div:not(:last-child) {
+    margin-bottom: 1.8em;
+}
+
+.dynamicForm label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.submitBtn {
+    line-height: 1.5;
+    font-size: 1.1rem;
+    box-shadow: 1px 1px 1px rgba(0 0 0 / 1);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #A3BCF9;
+    transition: background-color 450ms ease-in;
+
+    &:hover {
+        background-color: #85a3ee;
+    }
+}

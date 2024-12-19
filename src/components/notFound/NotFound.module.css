@@ -1,0 +1,14 @@
+.main {
+    min-height: 90vh;
+    display: grid;
+    place-items: center;
+}
+
+.heading {
+    font-size: 2.5rem;
+}
+
+.para {
+    font-size: 1.2rem;
+    text-align: center;
+}

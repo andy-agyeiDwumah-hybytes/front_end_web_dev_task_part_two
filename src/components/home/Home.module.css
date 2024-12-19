@@ -1,0 +1,47 @@
+.main {
+    text-align: center;
+    position: relative;
+    padding: 5em 0;
+    background: url("../../assets/images/home_page_backgroundImg.jpg") no-repeat center;
+    border-image: linear-gradient(rgba(255 255 255 / 0.6), rgba(0 0 255 / 0.4)) fill 1;
+}
+
+.mainHeading {
+    font-size: 3.8rem;
+    letter-spacing: 5px;
+    margin-top: 0;
+}
+
+.secondaryHeading {
+    font-size: 2rem;
+}
+
+.homeFooter {
+    padding: 1.5em 1.8em;
+    background-color: #FAFAFF;
+}
+
+.footerPara {
+    font-size: 1.1rem;
+}
+
+.homeList {
+    list-style: none;
+    margin: 0;
+    padding: 1em 0;
+}
+
+.listItem {
+    margin-bottom: 2em;
+}
+
+.itemLink {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.1rem;
+    transition: color 300ms ease-in;
+}
+
+.itemLink:hover {
+    color: rgba(255 0 0 / 1);
+}

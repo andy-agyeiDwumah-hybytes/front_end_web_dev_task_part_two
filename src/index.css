@@ -1,0 +1,40 @@
+:root {
+    --pinkish-background: #E8EBE4;
+    --ghost-white: #E8EBF7;
+    --greyish-white: #efefef;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* Background-colours for different components */
+body.home {
+    background-color: #FAFAFF;
+    margin: 0;
+}
+
+body.hello,
+body.profile,
+body.counter,
+body.fetchdata {
+    background-color: var(--ghost-white);
+}
+
+body.list,
+body.quiz,
+body.form {
+    background-color: var(--pinkish-background);
+}
+
+body.button,
+body.parent-child,
+body.timer {
+    background-color: var(--greyish-white);
+}

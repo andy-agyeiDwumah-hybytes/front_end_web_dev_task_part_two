@@ -1,0 +1,68 @@
+.headerContainer, .main {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.headerContainer {
+    text-align: center;
+}
+
+.formContentContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 5em;
+    min-height: 95vh;
+}
+
+.questionsContainer {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    padding: 2em 1em;
+}
+
+/* Show current question */
+.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.quizQuestionLabel {
+    font-size: 1.4rem;
+}
+
+.quizInputRadio {
+    margin-bottom: 1.8em;
+}
+
+.quizQuestionLegend {
+    font-size: 1.6rem;
+}
+
+.quizBtnContainer {
+    position: absolute;
+    /* Ensure that submit button has enough space to display */
+    bottom: 12%;
+}
+
+.quizBtnSubmitContainer {
+    bottom: 0;
+}
+
+.quizBtn {
+    line-height: 1.5;
+    font-size: 1.1rem;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.quizBtnNext {
+    margin-left: 0.5em;
+}
+
+.displayScorePara {
+    font-size: 1.8rem;
+}
