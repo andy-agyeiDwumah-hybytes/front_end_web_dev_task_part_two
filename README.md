@@ -20,7 +20,7 @@ This is necessary to view the following exercises:
 ## Getting Started ✅
 
 1. Clone the repository: <br>
-`git clone`
+`git clone https://github.com/andy-agyeiDwumah-hybytes/front_end_web_dev_task_part_two.git`
 
 2. Install dependencies: <br>
 `npm install`
