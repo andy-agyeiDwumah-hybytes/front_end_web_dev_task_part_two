@@ -61,6 +61,15 @@
 
 .quizBtnNext {
     margin-left: 0.5em;
+    background-color: #56E39F;
+}
+
+.quizBtnPrev {
+    background-color: #D6D6B1;
+}
+
+.quizBtnSubmit {
+    background-color: #1A8FE3;
 }
 
 .displayScorePara {

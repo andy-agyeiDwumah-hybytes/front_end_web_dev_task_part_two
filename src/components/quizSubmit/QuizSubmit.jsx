@@ -22,7 +22,7 @@ export default function QuizSubmit({
         ) : (
           <button
             type="submit"
-            className={styles.quizBtn}
+            className={[styles.quizBtn, styles.quizBtnSubmit].join(" ")}
             disabled={userScore !== null ? true : false}
           >
             Submit quiz

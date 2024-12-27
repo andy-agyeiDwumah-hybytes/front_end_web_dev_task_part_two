@@ -9,6 +9,8 @@ const emailRegex = new RegExp(`^[^\\s@]+@[^\\s@]+(\\.[^\\s@]+)+$`)
 const emailErrorText = "Please provide a valid email";
 const provideBothPasswords = "Both password fields are required";
 const nameErrorText = "Please provide a name";
+// Max length for inputs
+const MAXLENGTH = 50;
 
 export default function Form() {
   const [name, setName] = useState("")
@@ -26,7 +28,7 @@ export default function Form() {
   const handleSubmit = e => {
     e.preventDefault();
     // If all input fields are empty
-    if (!name && !email && !password && !confirmPassword) {
+    if (!name.trim(" ") && !email && !password && !confirmPassword) {
       setPasswordError(provideBothPasswords);
       setEmailError(emailErrorText);
     }
@@ -40,7 +42,7 @@ export default function Form() {
     } else {
       setPasswordError("")
     }
-    if (name
+    if (name.trim(" ")
       && email
       && password
       && confirmPassword
@@ -48,7 +50,7 @@ export default function Form() {
       && emailRegex.test(email)) {
       // Get data if there are no errors
       let formData = new FormData(formRef.current)
-      let name = formData.get("user_name")
+      let name = formData.get("user_name").trim(" ")
       let email = formData.get("user_email")
       let password = formData.get("user_password")
 
@@ -84,12 +86,14 @@ export default function Form() {
     <main className={styles.main}>
       <form
         className={styles.dynamicForm}
-        onSubmit={e => handleSubmit(e)}
+        onSubmit={handleSubmit}
         ref={formRef}
         aria-labelledby="create-account-heading"
         noValidate // Validate form myself
       >
-        <h1 id="create-account-heading" className={styles.heading}>Create an account</h1>
+        <h1 id="create-account-heading" className={styles.heading}>
+          Create an account
+        </h1>
         <p className={styles.requiredText}>
           Required fields are followed by <span aria-label="required">*</span>.
         </p>
@@ -104,10 +108,11 @@ export default function Form() {
             value={name}
             onChange={e => setName(e.target.value)}
             ref={nameRef}
+            maxLength={MAXLENGTH}
             required
-            // className={formHasBeenSubmitted && !name ? styles.invalidData : ""}
           />
-          {formHasBeenSubmitted && !name && (
+          {/* Show error if there are a bunch of white spaces */}
+          {formHasBeenSubmitted && !name.trim(" ") && (
             <p className={styles.showInvalidPara}>{nameErrorText}</p>
           )}
         </div>
@@ -120,11 +125,9 @@ export default function Form() {
             id="email"
             name="user_email"
             value={email}
-            onChange={e => handleEmailChange(e)}
+            onChange={handleEmailChange}
+            maxLength={MAXLENGTH}
             required
-            // className={
-            //   formHasBeenSubmitted && emailError ? styles.invalidData : ""
-            // }
           />
           {formHasBeenSubmitted && emailError && (
             <p className={styles.showInvalidPara}>{emailError}</p>
@@ -139,11 +142,9 @@ export default function Form() {
             id="password"
             name="user_password"
             value={password}
+            maxLength={MAXLENGTH}
             onChange={e => setPassword(e.target.value)}
             required
-            // className={
-            //   formHasBeenSubmitted && passwordError ? styles.invalidData : ""
-            // }
           />
         </div>
         <div>
@@ -155,18 +156,18 @@ export default function Form() {
             id="confirm-password"
             name="user_confirm_password"
             value={confirmPassword}
+            maxLength={MAXLENGTH}
             onChange={e => setConfirmPassword(e.target.value)}
             required
-            // className={
-            //   formHasBeenSubmitted && passwordError ? styles.invalidData : ""
-            // }
           />
           {formHasBeenSubmitted && passwordError && (
             <p className={styles.showInvalidPara}>{passwordError}</p>
           )}
         </div>
         <div>
-          <button type="submit" className={styles.submitBtn}>Submit</button>
+          <button type="submit" className={styles.submitBtn}>
+            Submit
+          </button>
         </div>
       </form>
     </main>

@@ -68,7 +68,7 @@ export default function ToDoListItem({
         type="checkbox"
         checked={completed}
         className={styles.toDoListCheckbox}
-        onChange={(e) => onToggleTodo(id, e.target.checked)}
+        onChange={e => onToggleTodo(id, e.target.checked)}
         id={id}
         name={id}
       />

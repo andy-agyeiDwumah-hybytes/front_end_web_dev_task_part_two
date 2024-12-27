@@ -34,7 +34,7 @@ export default function Timer() {
         </h1>
         {timer === 0 && (
           <form
-            onSubmit={e => handleSubmit(e)}
+            onSubmit={handleSubmit}
             className={styles.timerForm}
             aria-label="Set timer"
           >

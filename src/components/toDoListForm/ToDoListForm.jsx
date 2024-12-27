@@ -125,7 +125,7 @@ export default function ToDoListForm() {
     <main className={styles.main}>
       <form
         className={styles.toDoListForm}
-        onSubmit={e => handleSubmit(e)}
+        onSubmit={handleSubmit}
         aria-label="Add todo"
       >
         <div>
@@ -137,7 +137,7 @@ export default function ToDoListForm() {
             className={styles.addNewToDoInput}
             value={newTodo}
             aria-label="Add todo item"
-            onChange={e => handleOnChange(e)}
+            onChange={handleOnChange}
           />
           <button
             type="submit"
