@@ -38,3 +38,7 @@ body.parent-child,
 body.timer {
     background-color: var(--greyish-white);
 }
+
+button {
+    color: #000;
+}
