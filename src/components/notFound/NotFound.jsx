@@ -9,7 +9,7 @@ export default function NotFound() {
       <div>
         <h1 className={styles.heading}>Page not found.</h1>
         <p className={styles.para}>
-          Back to <Link to="/">home</Link>
+          Back to <Link to="/" replace>home</Link>
         </p>
       </div>
     </main>
